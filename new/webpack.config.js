@@ -8,12 +8,13 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  mode: 'production',
+  mode: 'development',
   entry: './app/app.js',
   output: {
     filename: 'app-build.js',
     path: path.resolve(__dirname, 'spreadsheet-output')
   },
+  devtool: 'inline-source-map',
   module: {
     rules: [
       {

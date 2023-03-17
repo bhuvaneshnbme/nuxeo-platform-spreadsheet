@@ -182,4 +182,6 @@ function b64DecodeUnicode(str) {
   }).join(''));
 }
 
+run();
+
 export {run};

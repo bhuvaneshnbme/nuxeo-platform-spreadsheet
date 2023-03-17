@@ -1,6 +1,15 @@
 const path = require('path');
 
 module.exports = {
+  mode: 'production',
+  resolve: {
+    alias: {
+      'babel-core': path.resolve(__dirname, 'node_modules/babel-core'),
+      'babel': path.resolve(__dirname, 'node_modules/babel'),
+      'typescript': path.resolve(__dirname, 'node_modules/typescript'),
+      'minimatch': path.resolve(__dirname, 'node_modules/minimatch'),
+    },
+  },
   entry: {
     vendor: [
       'jquery',
