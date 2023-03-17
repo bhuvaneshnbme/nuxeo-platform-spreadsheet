@@ -53,14 +53,14 @@ module.exports = {
     new CleanWebpackPlugin({
       cleanOnceBeforeBuildPatterns: [
         path.join(__dirname, 'app-build.js'),
-        path.join(__dirname, '../../../target/classes/web/nuxeo.war/spreadsheet/**'),
+        path.join(__dirname, 'spreadsheet-output/**'),
       ],
     }),
     new CopyWebpackPlugin({
       patterns: [
         {
           from: 'app/images/**/*',
-          to: path.join(__dirname, '../../../target/classes/web/nuxeo.war/spreadsheet/images/[name][ext]'),
+          to: path.join(__dirname, 'spreadsheet-output/images/[name][ext]'),
         },
       ],
     }),
